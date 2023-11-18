@@ -128,7 +128,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Troll2_0: -8946714090547424257
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
