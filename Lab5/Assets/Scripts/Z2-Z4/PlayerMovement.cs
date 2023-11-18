@@ -10,7 +10,7 @@ public class PlayerMovement : MonoBehaviour
     public PlayerCam playerCam;
     private float horizontalInput;
     private float verticalInput;
-    private Rigidbody rb;
+    public Rigidbody rb;
 
     void Start()
     {

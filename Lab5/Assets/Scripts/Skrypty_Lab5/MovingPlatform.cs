@@ -8,36 +8,36 @@ public class MovingPlatform : MonoBehaviour
     private bool shouldMove = false;
     private PlayerMovement player;
 
-    void Start()
-    {
-        player = null;
-    }
+    private Vector3 playerOffset;
 
     void OnCollisionEnter(Collision collision)
     {
-            player = collision.gameObject.GetComponent<PlayerMovement>();
-            if (player != null)
-            {
-                Debug.Log("Gracz na platformie");
-                shouldMove = true;
-            }
+        player = collision.gameObject.GetComponent<PlayerMovement>();
+        if (player != null)
+        {
+            Debug.Log("Player on platform");
+            shouldMove = true;
+            playerOffset = player.transform.position - transform.position;
+        }
     }
 
     void OnCollisionExit(Collision collision)
     {
-            PlayerMovement collidedPlayer = collision.gameObject.GetComponent<PlayerMovement>();
-            if (collidedPlayer != null && collidedPlayer == player)
-            {
-                Debug.Log("Gracz poza platform¹");
-                shouldMove = false;
-                player = null; 
-            }
+        PlayerMovement collidingPlayer = collision.gameObject.GetComponent<PlayerMovement>();
+        if (collidingPlayer != null && collidingPlayer == player)
+        {
+            Debug.Log("Player not on platform");
+            shouldMove = false;
+            player = null;
+        }
     }
 
     void Update()
     {
+
         if (shouldMove)
         {
+            player.transform.position = new Vector3(transform.position.x + playerOffset.x, player.transform.position.y, player.transform.position.z);
             transform.position = Vector3.MoveTowards(transform.position, endPoint.position, speed * Time.deltaTime);
 
             if (transform.position == endPoint.position)
@@ -50,7 +50,7 @@ public class MovingPlatform : MonoBehaviour
             transform.position = Vector3.MoveTowards(transform.position, startPoint.position, speed * Time.deltaTime);
 
             if (transform.position == startPoint.position)
-            {
+            {   
                 shouldMove = false;
             }
         }
