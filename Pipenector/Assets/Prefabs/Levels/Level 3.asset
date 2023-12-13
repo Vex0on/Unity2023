@@ -16,29 +16,29 @@ MonoBehaviour:
   Col: 4
   Data:
   - name: 'row: 1, col: 1'
-    type: 1
-    rotation: 0
+    type: 4
+    rotation: 3
   - name: 'row: 1, col: 2'
-    type: 0
-    rotation: 0
+    type: 2
+    rotation: 3
   - name: 'row: 1, col: 3'
-    type: 1
+    type: 4
     rotation: 0
   - name: 'row: 1, col: 4'
-    type: 0
-    rotation: 0
+    type: 1
+    rotation: 3
   - name: 'row: 2, col: 1'
     type: 4
     rotation: 0
   - name: 'row: 2, col: 2'
-    type: 3
-    rotation: 2
+    type: 2
+    rotation: 3
   - name: 'row: 2, col: 3'
-    type: 4
+    type: 5
     rotation: 2
   - name: 'row: 2, col: 4'
     type: 2
-    rotation: 0
+    rotation: 1
   - name: 'row: 3, col: 1'
     type: 2
     rotation: 3
@@ -46,13 +46,13 @@ MonoBehaviour:
     type: 3
     rotation: 3
   - name: 'row: 3, col: 3'
-    type: 0
-    rotation: 2
+    type: 2
+    rotation: 0
   - name: 'row: 3, col: 4'
     type: 5
     rotation: 0
   - name: 'row: 4, col: 1'
-    type: 5
+    type: 0
     rotation: 0
   - name: 'row: 4, col: 2'
     type: 0

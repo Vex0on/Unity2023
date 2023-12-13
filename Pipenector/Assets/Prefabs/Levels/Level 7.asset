@@ -12,54 +12,198 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c540489af800304796547b8a93eac76, type: 3}
   m_Name: Level 7
   m_EditorClassIdentifier: 
-  Row: 4
-  Col: 4
+  Row: 8
+  Col: 8
   Data:
   - name: 'row: 1, col: 1'
     type: 1
     rotation: 0
   - name: 'row: 1, col: 2'
-    type: 0
-    rotation: 0
+    type: 2
+    rotation: 3
   - name: 'row: 1, col: 3'
-    type: 0
-    rotation: 0
+    type: 3
+    rotation: 1
   - name: 'row: 1, col: 4'
-    type: 0
+    type: 2
+    rotation: 2
+  - name: 'row: 1, col: 5'
+    type: 4
+    rotation: 0
+  - name: 'row: 1, col: 6'
+    type: 3
+    rotation: 2
+  - name: 'row: 1, col: 7'
+    type: 4
+    rotation: 2
+  - name: 'row: 1, col: 8'
+    type: 2
     rotation: 0
   - name: 'row: 2, col: 1'
-    type: 4
-    rotation: 0
+    type: 2
+    rotation: 3
   - name: 'row: 2, col: 2'
     type: 3
-    rotation: 2
+    rotation: 3
   - name: 'row: 2, col: 3'
-    type: 4
+    type: 2
     rotation: 2
   - name: 'row: 2, col: 4'
-    type: 2
-    rotation: 0
-  - name: 'row: 3, col: 1'
-    type: 2
-    rotation: 3
-  - name: 'row: 3, col: 2'
-    type: 3
-    rotation: 3
-  - name: 'row: 3, col: 3'
-    type: 0
-    rotation: 2
-  - name: 'row: 3, col: 4'
     type: 5
     rotation: 0
-  - name: 'row: 4, col: 1'
+  - name: 'row: 2, col: 5'
     type: 0
     rotation: 0
-  - name: 'row: 4, col: 2'
+  - name: 'row: 2, col: 6'
+    type: 4
+    rotation: 0
+  - name: 'row: 2, col: 7'
     type: 0
     rotation: 0
-  - name: 'row: 4, col: 3'
-    type: 0
-    rotation: 0
-  - name: 'row: 4, col: 4'
+  - name: 'row: 2, col: 8'
     type: 1
     rotation: 2
+  - name: 'row: 3, col: 1'
+    type: 0
+    rotation: 0
+  - name: 'row: 3, col: 2'
+    type: 0
+    rotation: 0
+  - name: 'row: 3, col: 3'
+    type: 0
+    rotation: 0
+  - name: 'row: 3, col: 4'
+    type: 3
+    rotation: 3
+  - name: 'row: 3, col: 5'
+    type: 3
+    rotation: 0
+  - name: 'row: 3, col: 6'
+    type: 2
+    rotation: 3
+  - name: 'row: 3, col: 7'
+    type: 3
+    rotation: 3
+  - name: 'row: 3, col: 8'
+    type: 4
+    rotation: 0
+  - name: 'row: 4, col: 1'
+    type: 4
+    rotation: 3
+  - name: 'row: 4, col: 2'
+    type: 3
+    rotation: 1
+  - name: 'row: 4, col: 3'
+    type: 4
+    rotation: 0
+  - name: 'row: 4, col: 4'
+    type: 2
+    rotation: 3
+  - name: 'row: 4, col: 5'
+    type: 0
+    rotation: 0
+  - name: 'row: 4, col: 6'
+    type: 0
+    rotation: 0
+  - name: 'row: 4, col: 7'
+    type: 3
+    rotation: 1
+  - name: 'row: 4, col: 8'
+    type: 2
+    rotation: 0
+  - name: 'row: 5, col: 1'
+    type: 0
+    rotation: 0
+  - name: 'row: 5, col: 2'
+    type: 2
+    rotation: 0
+  - name: 'row: 5, col: 3'
+    type: 2
+    rotation: 0
+  - name: 'row: 5, col: 4'
+    type: 0
+    rotation: 0
+  - name: 'row: 5, col: 5'
+    type: 0
+    rotation: 0
+  - name: 'row: 5, col: 6'
+    type: 0
+    rotation: 0
+  - name: 'row: 5, col: 7'
+    type: 0
+    rotation: 0
+  - name: 'row: 5, col: 8'
+    type: 4
+    rotation: 1
+  - name: 'row: 6, col: 1'
+    type: 0
+    rotation: 0
+  - name: 'row: 6, col: 2'
+    type: 0
+    rotation: 0
+  - name: 'row: 6, col: 3'
+    type: 3
+    rotation: 0
+  - name: 'row: 6, col: 4'
+    type: 0
+    rotation: 0
+  - name: 'row: 6, col: 5'
+    type: 0
+    rotation: 0
+  - name: 'row: 6, col: 6'
+    type: 2
+    rotation: 1
+  - name: 'row: 6, col: 7'
+    type: 5
+    rotation: 0
+  - name: 'row: 6, col: 8'
+    type: 3
+    rotation: 2
+  - name: 'row: 7, col: 1'
+    type: 0
+    rotation: 0
+  - name: 'row: 7, col: 2'
+    type: 2
+    rotation: 3
+  - name: 'row: 7, col: 3'
+    type: 4
+    rotation: 3
+  - name: 'row: 7, col: 4'
+    type: 2
+    rotation: 2
+  - name: 'row: 7, col: 5'
+    type: 0
+    rotation: 0
+  - name: 'row: 7, col: 6'
+    type: 4
+    rotation: 1
+  - name: 'row: 7, col: 7'
+    type: 4
+    rotation: 1
+  - name: 'row: 7, col: 8'
+    type: 2
+    rotation: 3
+  - name: 'row: 8, col: 1'
+    type: 0
+    rotation: 0
+  - name: 'row: 8, col: 2'
+    type: 4
+    rotation: 0
+  - name: 'row: 8, col: 3'
+    type: 0
+    rotation: 0
+  - name: 'row: 8, col: 4'
+    type: 2
+    rotation: 3
+  - name: 'row: 8, col: 5'
+    type: 3
+    rotation: 0
+  - name: 'row: 8, col: 6'
+    type: 2
+    rotation: 0
+  - name: 'row: 8, col: 7'
+    type: 2
+    rotation: 1
+  - name: 'row: 8, col: 8'
+    type: 1
+    rotation: 3
