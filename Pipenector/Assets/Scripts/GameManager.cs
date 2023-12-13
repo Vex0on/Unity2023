@@ -4,23 +4,38 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    [SerializeField] private Level _level;
+    [SerializeField] private List<Level> levels;
     [SerializeField] private Pipe _cellPrefab;
 
     public static GameManager Instance;
 
-    [SerializeField] private bool isLvlFinished;
+    private bool isLvlFinished;
     private Pipe[,] pipes;
     private List<Pipe> pipeList;
+    private int currentLevelIndex = 0;
+
+    private Level _level;
 
     private void Awake()
     {
         Instance = this;
-        SpawnLevel();
+    }
+
+    private void Start()
+    {
+        if (levels.Count > 0)
+        {
+            SpawnLevel();
+        }
+        else
+        {
+            Debug.LogError("Levels configuration is invalid.There are no levels to load!");
+        }
     }
 
     public void SpawnLevel()
     {
+        _level = levels[currentLevelIndex];
         pipes = new Pipe[_level.Row, _level.Col];
         pipeList = new List<Pipe>();
 
@@ -45,19 +60,6 @@ public class GameManager : MonoBehaviour
         cameraPos.x = _level.Col * 0.5f;
         cameraPos.y = -_level.Row * 0.5f;
         Camera.main.transform.position = cameraPos;
-    }
-
-    private void OnDrawGizmos()
-    {
-        Gizmos.color = Color.red;
-        for(int i = 0; i < _level.Row; i++)
-        {
-            for (int j = 0; j < _level.Col; j++)
-            {
-                Vector2 spawnPos = new Vector2(j, -i);
-                Gizmos.DrawWireCube(spawnPos, Vector2.one);
-            }
-        }
     }
 
     public void DestroyLevel()
@@ -157,7 +159,6 @@ public class GameManager : MonoBehaviour
                 tempPipe.UpdateFilled();
             }
         }
-
     }
 
     private void CheckWin()
@@ -173,12 +174,50 @@ public class GameManager : MonoBehaviour
             }
         }
         isLvlFinished = true;
-        StartCoroutine(GameFinish());
+        StartCoroutine(LevelFinish());
     }
 
-    private IEnumerator GameFinish()
+    private IEnumerator LevelFinish()
     {
-        yield return new WaitForSeconds(2f);
-        UnityEngine.SceneManagement.SceneManager.LoadScene(0);
+        yield return new WaitForSeconds(5f);
+        if (currentLevelIndex < levels.Count - 1)
+        {
+            currentLevelIndex++;
+            isLvlFinished = false;
+            DestroyLevel();
+            SpawnLevel();
+        }
+        else
+        {
+            Debug.Log("The End!");
+        }
     }
+
+    private void OnDrawGizmos()
+    {
+        if (levels == null || levels.Count == 0)
+        {
+            Debug.LogWarning("There are no levels to draw Gizmos. Check configuration.");
+            return;
+        }
+
+        Level currentLevel = levels[currentLevelIndex];
+
+        if (currentLevel == null)
+        {
+            Debug.LogWarning("Current level is null. Check configuration.");
+            return;
+        }
+
+        Gizmos.color = Color.red;
+        for (int i = 0; i < currentLevel.Row; i++)
+        {
+            for (int j = 0; j < currentLevel.Col; j++)
+            {
+                Vector2 spawnPos = new Vector2(j, -i);
+                Gizmos.DrawWireCube(spawnPos, Vector2.one);
+            }
+        }
+    }
+
 }
